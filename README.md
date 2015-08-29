@@ -1,4 +1,6 @@
 # Themis Attack Protocol
+**FYI:** This document is also available in [Russian language](README_RU.md).
+
 This repo contains the instructions for submitting captured flags to the [Themis Finals](https://github.com/aspyatkin/themis-finals) - CTF contest checking system.
 
 This system will be used on [VolgaCTF 2015 Finals](http://volgactf.ru) contest on September 10, 2015.
@@ -9,9 +11,9 @@ It is common to use Telnet for submitting flags on the CTF contests. However, [T
 1. You should know a contest checking system's IP address.
 2. You should have a command-line utility capable of sending HTTP requests.
 
-## Submitting flag(s)
+## Submitting flags
 Assuming contest checking system IP address is `10.0.0.2` and you have [curl](http://curl.haxx.se) installed:
-1. Get some flags. Remember, a valid flag should match the following regexp: `/^[\da-f]{32}=$`.
+1. Capture flags. Remember, a valid flag should match the following regexp: `/^[\da-f]{32}=$/`.
 2. Construct JSON array of flags. For instance,
 `["b5c8b7c23cec74a903f764ec202d7c5c=","2bc1da92090e8b13d2950fc517752eea="]`
 3. Perform an HTTP request:
@@ -33,12 +35,12 @@ Assuming contest checking system IP address is `10.0.0.2` and you have [curl](ht
 |9|Submitted flag belongs to the attacking team and therefore won't be accepted|
 |10|Submitted flag has been accepted already|
 |11|Submitted flag has not been found|
-|13|The attacking team service is not up and therefore flags from the same services of other teams won't be accepted|
+|12|The attacking team service is not up and therefore flags from the same services of other teams won't be accepted|
 
 ## Notes
-1. Request payload is limited to 1024 bytes. You can safely pass about 25 flags at once.
-2. Each flag is issued for a team's service. To submit a captured flag from your competitor's service `N`, please assure that **your** service `N` is up and running.
-3. There are some limitations to flag submissions. You can make no more than `X` attack attempts (one flag) in the last `Y` seconds. For instance, if `X` is 100 and `Y` is 60, you can make 100 attack attempts in a minute (if you send 25 flags at each request, you can make 4 requests in a minute). Contest organizing committee should clarify the values of `X` and `Y` for contestants.
+1. Request payload is limited to 1024 bytes. You can safely pass up to 25 flags at once.
+2. Before submitting flags captured from your competitor's service `N`, please assure that **your** service `N` is up and running.
+3. There are some limitations to flag submissions. You can make no more than `X` attack attempts (one flag) in the last `Y` seconds. Both successful and unsuccessful attempts are counted. For instance, if `X` is 100 and `Y` is 60, you can make 100 attack attempts in a minute (if you send 25 flags at each request, you can make 4 requests in a minute). Contest organizing committee should clarify the values of `X` and `Y` for contestants.
 
 ## License
 MIT @ [Alexander Pyatkin](https://github.com/aspyatkin)
