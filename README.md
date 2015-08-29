@@ -12,12 +12,12 @@ It is common to use Telnet for submitting flags on the CTF contests. However, [T
 2. You should have a command-line utility capable of sending HTTP requests.
 
 ## Submitting flags
-Assuming contest checking system IP address is `10.0.0.2` and you have [curl](http://curl.haxx.se) installed:
-1. Capture flags. Remember, a valid flag should match the following regexp: `/^[\da-f]{32}=$/`.
+Assuming contest checking system IP address is `10.0.0.2` and you have [curl](http://curl.haxx.se) installed:  
+1. Capture flags. Remember, a valid flag should match the following regexp: `/^[\da-f]{32}=$/`.  
 2. Construct JSON array of flags. For instance,
-`["b5c8b7c23cec74a903f764ec202d7c5c=","2bc1da92090e8b13d2950fc517752eea="]`
-3. Perform an HTTP request:
-`$ curl -X POST -v -H "Content-Type: application/json" -d "[\"b5c8b7c23cec74a903f764ec202d7c5c=\",\"2bc1da92090e8b13d2950fc517752eea=\"]" http://10.0.0.2/api/submit`
+`["b5c8b7c23cec74a903f764ec202d7c5c=","2bc1da92090e8b13d2950fc517752eea="]`  
+3. Perform an HTTP request:  
+`$ curl -X POST -v -H "Content-Type: application/json" -d "[\"b5c8b7c23cec74a903f764ec202d7c5c=\",\"2bc1da92090e8b13d2950fc517752eea=\"]" http://10.0.0.2/api/submit`  
 4. Examine response. You will get a single number if a general error occured (e.g. data formatting error, or contest pause). Otherwise you will get an array of numbers, one for attack result of each flag. See possible result codes below.
 
 ## Attack result codes
