@@ -3,7 +3,7 @@
 
 This repo contains the instructions for submitting captured flags to the [Themis Finals](https://github.com/aspyatkin/themis-finals) - CTF contest checking system.
 
-This system will be used on [VolgaCTF 2015 Finals](http://volgactf.ru) contest on September 10, 2015.
+This system was used at [VolgaCTF 2015 Finals](http://volgactf.ru) contest on September 10, 2015.
 
 It is common to use Telnet for submitting flags on the CTF contests. However, [Themis Finals](https://github.com/aspyatkin/themis-finals) developers prefer the other way.
 
@@ -41,6 +41,16 @@ Assuming contest checking system IP address is `10.0.0.2` and you have [curl](ht
 1. Request payload is limited to 1024 bytes. You can safely pass up to 25 flags at once.
 2. Before submitting flags captured from your competitor's service `N`, please assure that **your** service `N` is up and running.
 3. There are some limitations to flag submissions. You can make no more than `X` attack attempts (one flag) in the last `Y` seconds. Both successful and unsuccessful attempts are counted. For instance, if `X` is 100 and `Y` is 60, you can make 100 attack attempts in a minute (if you send 25 flags at each request, you can make 4 requests in a minute). Contest organizing committee should clarify the values of `X` and `Y` for contestants.
+
+## See also
+- [themis-finals](https://github.com/aspyatkin/themis-finals)
+- [themis-finals-guidelines](https://github.com/aspyatkin/themis-finals-guidelines)
+- [themis-finals-infrastructure](https://github.com/aspyatkin/themis-finals-infrastructure)
+- [themis-attack-py](https://github.com/aspyatkin/themis-attack-py)
+- [themis-attack-result](https://github.com/aspyatkin/themis-attack-result)
+- [themis-checker-server](https://github.com/aspyatkin/themis-checker-server)
+- [themis-checker-result](https://github.com/aspyatkin/themis-checker-result)
+- [themis-checker-py](https://github.com/aspyatkin/themis-checker-py)
 
 ## License
 MIT @ [Alexander Pyatkin](https://github.com/aspyatkin)

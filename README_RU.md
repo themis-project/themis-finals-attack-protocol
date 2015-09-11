@@ -3,7 +3,7 @@
 
 Данный репозиторий содержит инструкции по отправке захваченных флагов серверу [Themis Finals](https://github.com/aspyatkin/themis-finals) - проверяющей системы соревнований в формате CTF.
 
-Данная система будет использована на [финале VolgaCTF 2015](http://volgactf.ru) 10 сентября 2015 г.
+Данная система была использована на [финале VolgaCTF 2015](http://volgactf.ru) 10 сентября 2015 г.
 
 Обычно на соревнованиях в формате CTF для отправки флагов используется протокол Telnet. Однако разработчики [Themis Finals](https://github.com/aspyatkin/themis-finals) предпочитают другие способы.
 
@@ -41,6 +41,16 @@
 1. Размер запроса ограничен 1024 байтами. Вы можете спокойно посылать до 25 флагов единовременно.
 2. Перед отправкой флагов с сервиса `N`, захваченных у вашего соперника, пожалуйста, убедитесь, что **ваш** сервис `N` находится в рабочем состоянии (UP).
 3. На приём флагов имеются некоторые ограничения. Вы можете делать не более чем `X` попыток атаки (один флаг) за последние `Y` секунд. Считаются как успешные, так и неудачные попытки. К примеру, если `X` равен 100, а `Y` равно 60, вы можете совершить 100 попыток атаки за минуту (если вы посылаете 25 флагов в одном запросе, то можно соответственно сделать 4 таких запроса в минуту). Организационный комитет соревнований должен прояснить соревнующимся актуальные значения `X` и `Y`.
+
+## Смотрите также
+- [themis-finals](https://github.com/aspyatkin/themis-finals)
+- [themis-finals-guidelines](https://github.com/aspyatkin/themis-finals-guidelines)
+- [themis-finals-infrastructure](https://github.com/aspyatkin/themis-finals-infrastructure)
+- [themis-attack-py](https://github.com/aspyatkin/themis-attack-py)
+- [themis-attack-result](https://github.com/aspyatkin/themis-attack-result)
+- [themis-checker-server](https://github.com/aspyatkin/themis-checker-server)
+- [themis-checker-result](https://github.com/aspyatkin/themis-checker-result)
+- [themis-checker-py](https://github.com/aspyatkin/themis-checker-py)
 
 ## Лицензия
 MIT @ [Пяткин Александр](https://github.com/aspyatkin)
