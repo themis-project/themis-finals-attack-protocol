@@ -4,8 +4,10 @@
 This repository contains the instructions for submitting captured flags to the [Themis Finals](https://github.com/aspyatkin/themis-finals) - CTF contest checking system.
 
 This system was used at the following CTF competitions:
- - [VolgaCTF 2015 Finals](http://volgactf.ru) on September 10, 2015;
- - [RCC-2016](http://rcc.zone) on May 11, 2016.
+ - [VolgaCTF 2015 Finals](https://volgactf.ru) on September 10, 2015;
+ - [RCC-2016](http://rcc.zone) on May 11, 2016;
+ - SamaraCTF on April 24, 2016;
+ - [VolgaCTF 2016 Finals](https://volgactf.ru) on September 15, 2016. 
 
 ## Prerequisites
 1. You should know a contest checking system's IP address or FQDN.
